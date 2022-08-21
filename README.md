@@ -1,5 +1,5 @@
 # <div align="center"> Pokedex React App</div>
-<p align="center">Uma Pokedex feita com React JS, Hooks, consumindo a Pokeapi e usando localstorage.</p>
+<p align="center">Uma Pokedex feita com React JS, Hooks. Consumindo a Pokeapi e usando localstorage.</p>
 
 ## 🛠️ Tecnologias
 
