@@ -2,24 +2,9 @@
 <div align="center" id="top"> 
   <img src="./.github/app.gif" alt="Pokedex" />
 
-# <div align="center"> Pokedex React App</div>
+# <div align="center"> Pokedex App</div>
 <p align="center">Uma Pokedex feita com React JS, Hooks. Consumindo a Pokeapi e usando localstorage.</p>
 
-
-  &#xa0;
-
-  <!-- <a href="https://pokedex.netlify.app">Demo</a> -->
-</div>
-
-<h1 align="center">Pokedex</h1>
-
-<!-- Status -->
-
-<!-- <h4 align="center"> 
-	🚧  Pokedex 🚀 Under construction...  🚧
-</h4> 
-
-<hr> -->
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
