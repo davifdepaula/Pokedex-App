@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+
 <div align="center" id="top"> 
   <img src="./.github/app.gif" alt="Pokedex" />
 
 # <div align="center"> Pokedex React App</div>
 <p align="center">Uma Pokedex feita com React JS, Hooks. Consumindo a Pokeapi e usando localstorage.</p>
->>>>>>> 
+
 
   &#xa0;
 
