@@ -14,23 +14,21 @@ function App() {
   const [notFound, setNotFound] = useState(false);
   const [totalPage, setTotalPage] = useState(0);
   const [favoritos, setFavoritos] = useState([]);
+  const [ativo, setAtivo] = useState(false);
 
   const pokemonPorPagina = 20;
-  
 
   const fetchpokemons = async () => {
     try {
       setLoading(true);
-      setNotFound(false)
-      const data = await pokemonGrid(pokemonPorPagina, page * pokemonPorPagina); 
+      setNotFound(false);
+      const data = await pokemonGrid(pokemonPorPagina, page * pokemonPorPagina);
       setTotalPage(Math.ceil(data.count / pokemonPorPagina));
       const promises = await data.results.map(async (pokemon) => {
-        
-        return await getPokemonData(pokemon.url); 
+        return await getPokemonData(pokemon.url);
       });
 
-     
-      const result = await Promise.all(promises); 
+      const result = await Promise.all(promises);
       setPokemons(result);
       setLoading(false);
     } catch (error) {
@@ -38,8 +36,16 @@ function App() {
     }
   };
 
+  const home = () => {
+    setPage(0);
+    console.log(ativo);
+    if (ativo) {
+      setAtivo(false);
+      return fetchpokemons();
+    }
+  };
+
   const carregaFavoritos = () => {
-    
     const pokemons =
       JSON.parse(window.localStorage.getItem(chaveFavoritos)) || [];
     setFavoritos(pokemons);
@@ -59,7 +65,7 @@ function App() {
     window.localStorage.setItem(chaveFavoritos, JSON.stringify(atualizador));
   };
 
-  const buscaPokemon = async (pokemon) => {    
+  const buscaPokemon = async (pokemon) => {
     if (!pokemon) {
       return fetchpokemons();
     }
@@ -77,7 +83,6 @@ function App() {
     setLoading(false);
   };
 
-  
   useEffect(() => {
     fetchpokemons();
   }, [page]);
@@ -97,16 +102,19 @@ function App() {
         <Navbar />
         <Searchbar buscaPokemon={buscaPokemon} />
         {notFound ? (
-          <div className="naoEncontrado">
-            Pokemon não encontrado!
-          </div>
+          <div className="naoEncontrado">Pokemon não encontrado!</div>
         ) : (
           <Pokedex
             pokemons={pokemons}
+            setPokemons={setPokemons}
             loading={loading}
             page={page}
             setPage={setPage}
             totalPage={totalPage}
+            setTotalPage={setTotalPage}
+            ativo={ativo}
+            setAtivo={setAtivo}
+            home={home}
           />
         )}
 
