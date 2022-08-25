@@ -41,23 +41,24 @@ export default function pokemonDetalhes(props) {
           >
             <div>{heart}</div>
           </button>
-        </div>
-        <img
-          alt={pokemon.name}
-          src={pokemon.sprites.front_default}
-          className="gridTopImage"
-        />
-        <div className="pokemon-type-text">
+          <div className="pokemon-type-text">
           {types.length > 1 ? (
-            <div className="gridTypes">
-              <div className="type-0"> {types[0]} </div>
-              <div className="type-1"> {types[1]} </div>
+            <div className="gridTypesDetalhes">
+              <div className="detalhestype-0"> {types[0]} </div>
+              <div className="detalhestype-1"> {types[1]} </div>
             </div>
           ) : (
             <div>
               <div className="type-0">{types}</div>
             </div>
           )}
+        </div>
+
+          <img
+          alt={pokemon.name}
+          src={pokemon.sprites.front_default}
+          className="gridTopImage"
+        />
           <div className="GridMid">
             <h3>abilities</h3>
             {abilities.length > 1 ? (

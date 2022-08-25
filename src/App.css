@@ -363,7 +363,7 @@ nav {
 .detalhesContainer {
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 550px;
   width: 25%;
   gap: 10px;
   border-radius: 20px;
@@ -386,13 +386,34 @@ nav {
   font-size: 20px;
   text-transform: capitalize;
   text-align: center;
+  margin-bottom: 5px;
+}
+
+.gridTypesDetalhes{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px
+}
+
+.detalhestype-0 {
+  border: 1px solid;
+  padding: 3px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+}
+
+.detalhestype-1 {
+  border: 1px solid;
+  padding: 3px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
 }
 
 .gridTopImage {
-  height: 250px;
+  height: 200px;
   width: 250px;
   align-items: center;
-  margin: 5px 50px 5px 100px;
+  margin: 15px 50px 5px 100px;
 }
 .GridTop div {
   text-transform: capitalize;
@@ -401,6 +422,9 @@ nav {
   font-size: 20px;
 }
 
+
+
+
 .GridMid {
   display: flex;
   flex-direction: column;
@@ -408,9 +432,32 @@ nav {
   margin: 10px;
 }
 
+.gridAbilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}  
+
+.ability-0 {
+  border: 1px solid;
+  padding: 3px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+  font-size: 10px
+}
+
+.ability-1 {
+  border: 1px solid;
+  padding: 3px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+}
+
 .GridBottom {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   font-family: "Teko", sans-serif;
@@ -426,11 +473,6 @@ nav {
   text-align: center;
 }
 
-.gridAbilities {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
-}
 
 /* cores dos cards dos pokemons */
 
