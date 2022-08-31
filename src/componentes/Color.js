@@ -10,7 +10,7 @@ export const color = (type) => {
     return "#5fbd58";
   }
 
-  if (type === "eletric") {
+  if (type === "electric") {
     return "#f2d94e";
   }
 

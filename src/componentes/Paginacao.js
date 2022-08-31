@@ -16,7 +16,8 @@ export default function Paginacao(props) {
   const { favoritos } = useContext(pokemonFavorito);
 
   return (
-    <div className="conteudo-pagina">
+    <div className="widthConteudo">
+      <div className="conteudo-pagina">
       <div className="conteudoCasinha">
         <button className="casinhaBtn" onClick={home}>
           <img alt="home" src={casa} className="casinha" />
@@ -25,6 +26,7 @@ export default function Paginacao(props) {
         <div className="casinhaTexto">Home</div>
       </div>
 
+      <div className="controlePagina">
       <button onClick={clickBotaoEsquerdo} className="botao-esquerda">
         <img alt="esquerda" src={esquerda} className="imagem-botao-esquerda" />
       </button>
@@ -37,6 +39,8 @@ export default function Paginacao(props) {
         <img alt="direita" src={direita} className="imagem-botao-direita" />
       </button>
 
+      </div>
+
       <div className="conteudoFavorito">
         <div>
           <img alt="coração" src={Coração} className="coraçãoFavorito" />
@@ -44,5 +48,8 @@ export default function Paginacao(props) {
         <div className="favoritoTexto">{favoritos.length} Favoritos</div>
       </div>
     </div>
+
+    </div>
+  
   );
 }

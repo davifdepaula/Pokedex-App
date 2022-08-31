@@ -16,7 +16,7 @@ function App() {
   const [favoritos, setFavoritos] = useState([]);
   const [ativo, setAtivo] = useState(false);
 
-  const pokemonPorPagina = 20;
+  const pokemonPorPagina = 24;
 
   const fetchpokemons = async () => {
     try {

@@ -61,13 +61,7 @@ export default function pokemonDetalhes(props) {
         </div>
           <div className="GridMid">
             <div className="gridAbilities">
-            {abilities.length > 1 ? (
-                <div className="ability-0"> {abilities[0]} | {abilities[1]} </div>
-            ) : (
-              <div>
-                <div className="ability-0">{abilities[0]}</div>
-              </div>
-            )}
+              <div className="Abilities"> {abilities[0]} | {abilities[1]} </div>    
               <h6>abilities</h6>
             </div>
 

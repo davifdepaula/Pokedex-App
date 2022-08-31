@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding:0;
 }
 
 body {
@@ -19,11 +20,6 @@ nav {
   align-items: center;
 }
 
-.nav-text {
-  color: black;
-  font-family: "ChalkdusterChalkduster, fantasy";
-  font-size: 20px;
-}
 
 /* estilização da barra de pesquisa */
 
@@ -36,7 +32,8 @@ nav {
 
 .searchBar {
   display: inline;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 20px;
   background-color: white;
   border: solid 1px;
@@ -52,7 +49,8 @@ nav {
     rgb(239, 187, 230)
   );
   height: 24px;
-  width: 50px;
+  width: 100%;
+  max-width: 50px;
   justify-content: space-between;
   border: solid 1px;
   border-radius: 3px;
@@ -71,7 +69,8 @@ nav {
   position: relative;
   margin: auto;
   justify-content: center;
-  width: 150px;
+  max-width: 150px;
+  width: 100%;
 }
 
 .carregando-texto {
@@ -83,16 +82,19 @@ nav {
 }
 .carregando-img {
   text-align: center;
-  width: 100px;
+  max-width: 100px;
+  width: 100%;
 }
 
 .pokedexGrid {
   display: grid;
-  grid-template-columns: repeat(4, 250px);
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, 250px);
   gap: 30px;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: auto 250px;
+  margin: auto;
   padding-inline-start: 0;
 }
 
@@ -208,20 +210,27 @@ nav {
 
 /* estilização da paginação e dos favoritos */
 
+.widthConteudo {
+  margin: auto;
+  width: 100%;
+  max-width: 900px;
+  width: 100%;
+}
 .conteudo-pagina {
   display: grid;
-  grid-template-columns: 350px 50px 200px 50px 400px;
-  gap: auto;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  margin: 20px;
+  gap: 5px;
 }
 
-.favorito {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  justify-content: left;
+.controlePagina {
+  display: grid;
+  grid-template-columns: 50px  200px  50px;
+  gap: 5px;
+  align-items: center;
 }
+
 
 .conteudoFavorito {
   display: flex;
@@ -351,6 +360,7 @@ nav {
   font-size: 15px;
   text-align: center;
   margin: 30px;
+  max-width: auto;
 }
 
 /* estilização do app */
@@ -366,7 +376,8 @@ nav {
   justify-content: center;
   align-items: center;
   height: 400px;
-  width: 30%;
+  max-width: 450px;
+  width: 100%;
   border-radius: 20px;
   margin: auto;
   border: solid 1px;
@@ -405,26 +416,6 @@ nav {
   font-size: 12px;
 }
 
-.gridTypesDetalhes{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px
-}
-
-.detalhestype-0 {
-  border: 1px solid;
-  padding: 3px;
-  box-shadow: 2px 2px 2px black;
-  border-radius: 10px;
-}
-
-.detalhestype-1 {
-  border: 1px solid;
-  padding: 3px;
-  box-shadow: 2px 2px 2px black;
-  border-radius: 10px;
-}
-
 .gridTopImage {
   height: 200px;
   width: 250px;
@@ -440,7 +431,7 @@ nav {
 }
 .GridMid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 200px 80px 80px;
   gap: 10px;
   justify-content: center;
   align-items: center;
@@ -465,12 +456,13 @@ nav {
   padding: 3px;
   box-shadow: 2px 2px 2px black;
   border-radius: 10px;
+  float: center;
 }  
 
-.ability-0 {
-  font-size: 15px;
-  align-items: center;
-
+.abilities {
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 0 5px;
 }
 
 
