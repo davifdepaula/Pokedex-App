@@ -16,38 +16,40 @@ export default function Paginacao(props) {
   const { favoritos } = useContext(pokemonFavorito);
 
   return (
-    <div className="widthConteudo">
+    <div className="navegacaoPagina">
       <div className="conteudo-pagina">
-      <div className="conteudoCasinha">
-        <button className="casinhaBtn" onClick={home}>
-          <img alt="home" src={casa} className="casinha" />
+
+        <div className="conteudoCasinha">
+          <button className="casinhaBtn" onClick={home}>
+            <img alt="home" src={casa} className="casinha" />
+          </button>
+
+          <div className="casinhaTexto">Home</div>
+        </div>
+
+        <div className="controlePagina">
+        <button onClick={clickBotaoEsquerdo} className="botao-esquerda">
+          <img alt="esquerda" src={esquerda} className="imagem-botao-esquerda" />
         </button>
 
-        <div className="casinhaTexto">Home</div>
-      </div>
-
-      <div className="controlePagina">
-      <button onClick={clickBotaoEsquerdo} className="botao-esquerda">
-        <img alt="esquerda" src={esquerda} className="imagem-botao-esquerda" />
-      </button>
-
-      <div className="pagina">
-        {page} de {totalPage}
-      </div>
-
-      <button onClick={clickBotaoDireito} className="botao-direita">
-        <img alt="direita" src={direita} className="imagem-botao-direita" />
-      </button>
-
-      </div>
-
-      <div className="conteudoFavorito">
-        <div>
-          <img alt="coração" src={Coração} className="coraçãoFavorito" />
+        <div className="pagina">
+          {page} de {totalPage}
         </div>
-        <div className="favoritoTexto">{favoritos.length} Favoritos</div>
+
+        <button onClick={clickBotaoDireito} className="botao-direita">
+          <img alt="direita" src={direita} className="imagem-botao-direita" />
+        </button>
+
+        </div>
+
+        <div className="conteudoFavorito">
+          <div>
+          {favoritos.length} <img alt="coração" src={Coração} className="coraçãoFavorito" /> 
+          </div>
+          <div className="favoritoTexto"> Favoritos</div>
+        </div>
+
       </div>
-    </div>
 
     </div>
   

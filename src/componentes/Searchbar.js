@@ -13,20 +13,22 @@ export default function Searchbar(props) {
   };
 
   const clickLupa = () => {
-    buscaPokemon(busca);
+    buscaPokemon(busca.toLowerCase());
   };
 
   return (
-    <div className="search">
-      <input
-        type="text"
-        placeholder="Buscar pokemon..."
-        className="searchBar"
-        onChange={pesquisa}
-      />
-      <button className="search-btn" onClick={clickLupa}>
-        <img alt="Buscar" src={Lupa} className="search-img" />
-      </button>
+    <div className="controleSearch">
+      <div className="search">
+        <input
+          type="text"
+          placeholder="Buscar pokemon..."
+          className="searchBar"
+          onChange={pesquisa}/>
+                
+        <button className="search-btn" onClick={clickLupa}>
+          <img alt="Buscar" src={Lupa} className="search-img" />
+        </button>
+      </div>
     </div>
   );
 }
