@@ -18,6 +18,11 @@ export default function pokemonDetalhes(props) {
     return ability.ability.name;
   });
 
+  const XP =  pokemon.base_experience
+  const HP=   pokemon.stats[0].base_stat
+  
+
+
   const clickCoracao = () => {
     atualizaFavoritos(pokemon.name);
   };
@@ -31,54 +36,57 @@ export default function pokemonDetalhes(props) {
     <div className="detalhesContainer" style={{ background: `${background}` }}>
       <div className="Grid">
         <div className="GridTop">
-          <div>
-            <h3>{pokemon.name}</h3>
-          </div>
-          <button
-            onClick={clickCoracao}
-            className="heartBtn"
-            style={{ background: `${background}` }}
-          >
-            <div>{heart}</div>
-          </button>
-          <div className="pokemon-type-text">
-          {types.length > 1 ? (
-            <div className="gridTypesDetalhes">
-              <div className="detalhestype-0"> {types[0]} </div>
-              <div className="detalhestype-1"> {types[1]} </div>
-            </div>
-          ) : (
-            <div>
-              <div className="type-0">{types}</div>
-            </div>
-          )}
-        </div>
 
-          <img
-          alt={pokemon.name}
-          src={pokemon.sprites.front_default}
-          className="gridTopImage"
-        />
+            <div className="gridTopButton">
+              <button
+                onClick={clickCoracao}
+                className="heartBtn"
+                style={{ background: `${background}` }}>
+                <div>{heart}</div>
+              </button>
+            </div>
+
+            <img
+            alt={pokemon.name}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
+            className="gridTopImage"
+            />
+
+            <h3>{pokemon.name}</h3>
+            <div className="status">
+            <dt>HP {HP}</dt>
+            <dt>XP {XP}</dt>
+            </div>
+
+        </div>
           <div className="GridMid">
-            <h3>abilities</h3>
+            <div className="gridAbilities">
             {abilities.length > 1 ? (
-              <div className="gridAbilities">
-                <div className="ability-0"> {abilities[0]} </div>
-                <div className="ability-1"> {abilities[1]} </div>
-              </div>
+                <div className="ability-0"> {abilities[0]} | {abilities[1]} </div>
             ) : (
               <div>
                 <div className="ability-0">{abilities[0]}</div>
               </div>
             )}
+              <h6>abilities</h6>
+            </div>
+
+            
+            <div className="pokemonHeight">
+              <div className="pesoAltura">
+                {pokemon.height / 10} m
+              </div>
+              <h6>Altura</h6>
+            </div>
+
+            <div className="pokemonWeight">
+              <div className="pesoAltura">
+                {pokemon.weight / 10} kg
+              </div>
+              <h6>Peso</h6>
+            </div>
           </div>
         </div>
-
-        <div className="GridBottom">
-          <li>Altura: {pokemon.height / 10} m</li>
-          <li>Peso: {pokemon.weight / 10} kg</li>
-        </div>
-      </div>
     </div>
   );
 }

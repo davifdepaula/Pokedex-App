@@ -62,7 +62,7 @@ export default function Pokemon(props) {
         <div className="card-mid">
           <img
             alt={pokemon.name}
-            src={pokemon.sprites.front_default}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
             className="pokemon-image"
           />
         </div>

@@ -8,7 +8,6 @@ import pokemonFavorito from "../context/Favoritocontext";
 export default function Paginacao(props) {
   const {
     page,
-    setPage,
     totalPage,
     clickBotaoDireito,
     clickBotaoEsquerdo,

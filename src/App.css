@@ -363,13 +363,18 @@ nav {
 .detalhesContainer {
   display: flex;
   flex-direction: column;
-  height: 550px;
-  width: 25%;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 30%;
   border-radius: 20px;
   margin: auto;
-  padding: auto;
   border: solid 1px;
+}
+
+.Grid {
+  margin: 0;
+  padding: 0;
 }
 
 .GridTop {
@@ -377,7 +382,8 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 10px;
+  margin: auto;
+  gap: 5px;
 }
 
 .GridTop h3 {
@@ -386,7 +392,17 @@ nav {
   font-size: 20px;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: 5px;
+}
+
+.status {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 10px;  
+}
+
+.status dt {
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
 }
 
 .gridTypesDetalhes{
@@ -413,66 +429,79 @@ nav {
   height: 200px;
   width: 250px;
   align-items: center;
-  margin: 15px 50px 5px 100px;
+  justify-content: center;
+  margin: 10px 50px 5px 100px;
 }
 .GridTop div {
   text-transform: capitalize;
-  margin-top: 10px;
+  margin-top: 5px;
   font-family: "Teko", sans-serif;
   font-size: 20px;
 }
-
-
-
-
 .GridMid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
   align-items: center;
   margin: 10px;
 }
 
-.gridAbilities {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}  
-
-.ability-0 {
-  border: 1px solid;
-  padding: 3px;
-  box-shadow: 2px 2px 2px black;
-  border-radius: 10px;
-  font-size: 10px
-}
-
-.ability-1 {
-  border: 1px solid;
-  padding: 3px;
-  box-shadow: 2px 2px 2px black;
-  border-radius: 10px;
-}
-
-.GridBottom {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-family: "Teko", sans-serif;
-  font-size: 15px;
-  margin: auto 100px auto 100px;
-}
-
-.GridBottom h3 {
+.GridMid h6 {
   color: black;
   font-family: "Press Start 2P", cursive;
-  font-size: 20px;
+  font-size: 9px;
   text-transform: capitalize;
   text-align: center;
 }
 
+.gridAbilities {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid;
+  padding: 3px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+}  
+
+.ability-0 {
+  font-size: 15px;
+  align-items: center;
+
+}
+
+
+.pokemonHeight {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid;
+  padding: 3px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+  font-size: 12px
+}
+
+.pokemonWeight {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid;
+  padding: 3px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+}
+.pesoAltura {
+  font-size: 15px;
+  align-items: center;
+}
 
 /* cores dos cards dos pokemons */
 
