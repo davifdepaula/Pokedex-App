@@ -16,42 +16,39 @@ export default function Paginacao(props) {
   const { favoritos } = useContext(pokemonFavorito);
 
   return (
-    <div className="navegacaoPagina">
       <div className="conteudo-pagina">
-
-        <div className="conteudoCasinha">
-          <button className="casinhaBtn" onClick={home}>
-            <img alt="home" src={casa} className="casinha" />
-          </button>
+        
+        <div className="home">
+          <div className="Casinha">
+            <input type="image" src={casa} className="casinhaBtn" onClick={home} />
+          </div>
 
           <div className="casinhaTexto">Home</div>
         </div>
+    
 
         <div className="controlePagina">
-        <button onClick={clickBotaoEsquerdo} className="botao-esquerda">
-          <img alt="esquerda" src={esquerda} className="imagem-botao-esquerda" />
-        </button>
 
-        <div className="pagina">
-          {page} de {totalPage}
+          <div className="esquerda">
+            <input type="image" onClick={clickBotaoEsquerdo} src={esquerda} className="botao-esquerda" />
+          </div>    
+          
+          <div className="meio">{page} de {totalPage}</div>
+
+          <div className="direita">
+            <input type="image" src={direita}  onClick={clickBotaoDireito} className="botao-direita"/>
+          </div>         
+
         </div>
 
-        <button onClick={clickBotaoDireito} className="botao-direita">
-          <img alt="direita" src={direita} className="imagem-botao-direita" />
-        </button>
-
+        <div className="conteudoFavorito"> 
+          <img alt="coração" src={Coração} className="coraçãoFavorito" />
+          <div className="favoritoTexto">{favoritos.length}</div>
+          <div className="favoritoTexto">Favoritos</div>
         </div>
 
-        <div className="conteudoFavorito">
-          <div>
-          {favoritos.length} <img alt="coração" src={Coração} className="coraçãoFavorito" /> 
-          </div>
-          <div className="favoritoTexto"> Favoritos</div>
-        </div>
 
       </div>
-
-    </div>
   
   );
 }
